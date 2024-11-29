@@ -11,14 +11,17 @@ import Footer from './components/Footer';
 // router
 const App = () => {
   return <div className='overflow-hidden'>
-    <Router>
-    <Header />
+    <Router future={{
+      v7_relativeSplatPath: true,
+      v7_startTransition: true
+    }} >
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product/:id' element={<ProductDetails />} />
       </Routes>
-    <Sidebar/>
-    <Footer/>
+      <Sidebar />
+      <Footer />
     </Router>
   </div>;
 };
