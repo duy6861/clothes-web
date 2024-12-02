@@ -27,10 +27,12 @@ const Product = ({ product }) => {
     </div>
     {/* category and title */}
     <div>
-      <div className='text-sm capitalize text-gray-500 mb-1'>{category}</div>
+
+      <Link to={`/product-category/${category}`}><div className='text-sm capitalize text-gray-500 mb-1'>{category}</div></Link>
       <Link to={`/product/${id}`}>
         <h2 className='font-semibold'>{title}</h2>
       </Link>
+
       <h2 className='font-semibold'><span className='text-[14px]'>$</span> {price}</h2>
     </div>
   </div>

@@ -7,6 +7,7 @@ import ProductDetails from './page/ProductDetails';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ProductCategory from './page/ProductCategory';
 
 // router
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product/:id' element={<ProductDetails />} />
+        <Route path='/product-category/:category' element={<ProductCategory />} />
       </Routes>
       <Sidebar />
       <Footer />
